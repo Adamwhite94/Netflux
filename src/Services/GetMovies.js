@@ -9,13 +9,13 @@ const prepHeaders = (headers) => {
 export const fetchMovies = createApi({
   reducerPath: "fetchMovies",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://moviesminidatabase.p.rapidapi.com/movie/",
+    baseUrl: "https://moviesminidatabase.p.rapidapi.com/movie/byGen/",
     prepareHeaders: prepHeaders
   }),
   tagTypes: [],
   endpoints: (builder) => ({
     getMoviesByGenre: builder.query({
-      query: (genre) => `byGen/${genre}`,
+      query: (genre) => `${genre}`,
     }),
   }),
 });

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { device } from "../Breakpoints/Breakpoints";
 const QuizContainer = styled.main`
   display: flex;
   align-items: center;
@@ -65,6 +65,19 @@ const QuizContentContainer = styled.section`
   grid-template-columns: repeat(3, 11rem);
   grid-row-gap: 1rem;
   padding-top: 1rem;
+
+  @media only screen and (${device.mobileMSmallerBP}) and (${device.mobileM}) {
+    display: grid;
+  grid-template-columns: repeat(2, 10.4rem);
+  grid-row-gap: 2rem;
+  padding-top: 1rem;
+ }
+ @media only screen and (${device.mobileLSmallerBP}) and (${device.mobileL}) {
+  display: grid;
+  grid-template-columns: repeat(2, 10.4rem);
+  grid-row-gap: 2rem;
+  padding-top: 1rem;
+}
 `;
 const QuizCompleteText = styled.h1`
   text-align: center;
@@ -72,6 +85,9 @@ const QuizCompleteText = styled.h1`
   color: #fff;
   font-family: "Inconsolata", monospace;
   padding-top: 2rem;
+  @media only screen and (${device.mobileMSmallerBP}) and (${device.mobileM}) {
+    font-size: 1.5rem;
+ }
 `;
 
 const MovieCard = styled.article`
@@ -82,6 +98,7 @@ const MovieTitle = styled.h1`
   color: #fff;
   font-family: "Inconsolata", monospace;
   padding-top: 2rem;
+  
 `;
 
 
@@ -91,7 +108,20 @@ const QuizCompleteContainer = styled.section`
   grid-column-gap: 3rem;
   justify-content: center;
   align-items: center;
-  
+  @media only screen and (${device.mobileMSmallerBP}) and (${device.mobileM}) {
+    display: grid;
+  grid-template-columns: repeat(2, 10rem);
+  grid-column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+ }
+@media only screen and (${device.mobileLSmallerBP}) and (${device.mobileL}) {
+  display: grid;
+  grid-template-columns: repeat(2, 10rem);
+  grid-column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
 `;
 const QuizCompleteTextContainer = styled.div`
 display:flex;
